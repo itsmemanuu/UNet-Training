@@ -15,7 +15,7 @@ class CarvanaDataset(Dataset):
         return len(self.images)
     
     def __getitem__(self, index):
-        img_path = os.path.join(self.image_dir, self.imahes[index])
+        img_path = os.path.join(self.image_dir, self.images[index])
         mask_path = os.path.join(self.mask_dir, self.images[index].replace(".jpg", "_mask.gif")) # Formato de las imagenes MASK del dataset
 
         # Load image and mask
